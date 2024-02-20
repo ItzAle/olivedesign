@@ -1,0 +1,141 @@
+.img img {
+  height: 400px;
+  width: 400px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.input::placeholder {
+  text-align: center;
+}
+
+.input {
+  max-width: 500px;
+  width: 500px;
+  height: 30px;
+  background-color: var(--color2);
+  border-radius: 11px;
+  color: white;
+  transition: all 0.4s ease;
+}
+input {
+  border-style: groove;
+}
+
+.img {
+  list-style: none;
+  color: white;
+  object-fit: cover;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  padding: 60px;
+  transition: all 0.2s ease;
+}
+
+.imgContent:hover {
+  cursor: pointer;
+  opacity: 60%;
+  filter: saturate(100%);
+  filter: brightness(50%);
+  filter: hue-rotate(5deg);
+}
+/* //////////Buttons section/////////// */
+.button_card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: baseline;
+  padding-bottom: 30px;
+}
+.buttons,
+.add,
+.favorite,
+.delete,
+.edit {
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+.add:hover,
+.edit:hover,
+.delete:hover {
+  transition: all 0.4s ease;
+  color: var(--color1);
+}
+.add,
+.delete,
+.edit {
+  transition: all 0.4s ease;
+}
+.favorite {
+  transition: all 0.4s ease;
+  color: var(--color1);
+}
+.favorite:hover {
+  color: white;
+}
+.MuiCircularProgress-root {
+  color: white;
+}
+.edit {
+  color: white;
+}
+.name {
+  font-size: 30px;
+  font-family: var(--font1);
+  font-weight: bolder;
+}
+/* ///////////////////// */
+
+button {
+  color: rgb(255, 251, 251);
+  background-color: transparent;
+  border-radius: 0cm;
+  padding: 0px;
+  box-sizing: 0px;
+  justify-content: center;
+  border-color: transparent;
+  padding: 10px;
+}
+/* ///////////////////////////// */
+@media (min-width: 1120px) {
+  .img {
+    list-style: none;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    padding: 60px;
+    transition: all 0.2s ease;
+  }
+}
+@media (max-width: 976px) {
+  .img {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: space-around;
+  }
+  .input {
+    max-width: 200px;
+    width: 200px;
+    height: 30px;
+    background-color: var(--color2);
+    border-radius: 11px;
+    color: white;
+    transition: all 0.4s ease;
+  }
+}

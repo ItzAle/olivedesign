@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from "react";
+import Navbar from "./components/nav/navbar";
+import * as React from "react";
+import Productos from "./Pages/Productos/Productos";
+import { Route, Routes } from "react-router-dom";
+import Error from "./Pages/404/error";
+import OliveCard from "./components/OliveCard/OliveCard";
+import ProductoDetail from "./Pages/ProductoDetail/ProductoDetail";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme == "light" ? "dark" : "light"));
-  };
-  useEffect(() => {
-    if (theme == "dark") {
-      document.querySelector("html").classList.add("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-    }
-  }, [theme]);
   return (
-    <div className="h-screen flex justify-center items-center dark:bg-neutral-900">
-      <button
-        onClick={handleChangeTheme}
-        className="bg-slate-200 px-4 py-2 rounded dark:bg-neutral-800 dark:text-white"
-      >
-        Change Theme
-      </button>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<OliveCard />} />
+        <Route path="/producto/:id/" element={<ProductoDetail />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
     </div>
   );
 }

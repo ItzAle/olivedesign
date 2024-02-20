@@ -1,0 +1,27 @@
+.img {
+  height: 200px;
+}
+
+.button {
+  transition: 0.2;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #4e942b;
+  padding: 10px 30px;
+  border: solid #4e942b 2px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+}
+
+.button:hover {
+  transition: 0.2s;
+  background-color: #598643;
+}
+
+.OliveCard {
+  padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

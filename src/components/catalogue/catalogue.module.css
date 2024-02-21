@@ -92,6 +92,7 @@ input {
   font-size: 30px;
   font-family: var(--font1);
   font-weight: bolder;
+  text-align: center;
 }
 /* ///////////////////// */
 
@@ -110,14 +111,13 @@ button {
   .img {
     list-style: none;
     color: white;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    gap: 120px;
     justify-items: center;
-    padding: 60px;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s ease;
+    padding: 120px 0 120px 0;
   }
 }
 @media (max-width: 976px) {
